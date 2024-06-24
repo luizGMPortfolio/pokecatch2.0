@@ -1,0 +1,254 @@
+// app global css in SCSS form
+
+.html,body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+
+input{
+  width: 300px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  padding-left: 10px
+}
+
+h1 {
+  font-family: "Slackey", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #C0C0C0;
+  font-size: 64px;
+  margin: 0;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 34px;
+  margin: 0;
+  text-align: start;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  padding: 5px 0;
+  margin: 0;
+  width: 90%;
+  background-color: #1c1c1c;
+  font-family: "Slackey", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: inherit;
+}
+
+h4{
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn-default {
+  font-family: inherit;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0;
+  background-color: #1c1c1c;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-change{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  min-height: inherit;
+}
+.btn-change::before{
+  box-shadow: none;
+}
+
+.fire {
+  background-color: #FF9C54;
+}
+
+.water {
+  background-color: #4D90D5;
+}
+
+.grass {
+  background-color: #63BB5B;
+}
+
+.bug {
+  background-color: #90C12C;
+}
+
+.electric {
+  background-color: #F3D23B;
+}
+
+.ice {
+  background-color: #9EE5FD;
+}
+
+.normal {
+  background-color: #C5C2BB;
+}
+
+.psychic {
+  background-color: #E8497F;
+}
+
+.fairy {
+  background-color: #F2AFF2;
+}
+
+.flying {
+  background-color: #98A9F2;
+}
+
+.rock {
+  background-color: #BCA45C;
+}
+
+.ground {
+  background-color: #D3B25A;
+}
+
+.poison {
+  background-color: #934392;
+}
+
+.dark {
+  background-color: #3E2D25;
+}
+
+.ghost {
+  background-color: #6060AF;
+}
+
+.steel {
+  background-color: #B5B5C4;
+}
+
+.dragon {
+  background-color: #7761E4;
+}
+
+.fighting {
+  background-color: #80351A;
+}
+
+
+
+
+.forest {
+  background: url('../../assets/Backgrounds/Floresta.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+}
+
+.cave {
+  background: url('../../assets/Backgrounds/caverna6.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.mountain {
+  background: url('../../assets/Backgrounds/montanha4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.beach {
+  background: url('../../assets/Backgrounds/praia2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.desert {
+  background: url('../../assets/Backgrounds/deserto3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vulcano {
+  background: url('../../assets/Backgrounds/vulção.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.HantedHouse {
+  background: url('../../assets/Backgrounds/ghost.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.floresta {
+  background-color: #04D000;
+}
+
+.caverna {
+  background-color: #683113;
+}
+
+.praia {
+  background-color: #0185FF;
+}
+
+.montanha {
+  background-color: #B0B0B0;
+}
+
+.deserto {
+  background-color: #DFBC05;
+}
+
+.vulção {
+  background-color: #FF5C00;
+}
+
+.asombrado {
+  background-color: #5000b9;
+}
