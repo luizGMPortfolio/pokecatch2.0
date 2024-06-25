@@ -11,10 +11,10 @@
 
       <div class="list">
         <div class="abas">
-          <div :class="[aba == 'seus' ? 'activeAba' : '', 'seus']" @click="() => this.aba = 'seus'">
+          <div :class="[aba == 'seus' ? 'activeAba' : '', 'seus']" @click="aba = 'seus'">
             <h2>Seus cards</h2>
           </div>
-          <div :class="[aba == 'all' ? 'activeAba' : '', 'all']" @click="() => this.aba = 'all'">
+          <div :class="[aba == 'all' ? 'activeAba' : '', 'all']" @click="aba = 'all'">
             <h2>Todos</h2>
           </div>
         </div>
