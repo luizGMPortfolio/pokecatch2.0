@@ -39,6 +39,9 @@ defineOptions({
       password: ''
     }
   },
+  created(){
+    location.reload();
+  },
   methods:{
     async handleLogin(){
       var data = {

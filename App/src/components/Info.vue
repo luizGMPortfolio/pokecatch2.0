@@ -17,13 +17,13 @@
 
     <div class='constainer'>
       <div class='abas'>
-        <div :class="['sobre', aba == 'sobre' ? 'activeAba' : '']" @click="this.aba = 'sobre'">
+        <div :class="['sobre', aba == 'sobre' ? 'activeAba' : '']" @click="aba = 'sobre'">
           <h2>Sobre</h2>
         </div>
-        <div :class="['moves', aba == 'moves' ? 'activeAba' : '']" @click="this.aba = 'moves'">
+        <div :class="['moves', aba == 'moves' ? 'activeAba' : '']" @click="aba = 'moves'">
           <h2>Moves</h2>
         </div>
-        <div :class="['status', aba == 'status' ? 'activeAba' : '']" @click="this.aba = 'status'">
+        <div :class="['status', aba == 'status' ? 'activeAba' : '']" @click="aba = 'status'">
           <h2>Status</h2>
         </div>
       </div>
