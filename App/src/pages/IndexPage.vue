@@ -1,4 +1,4 @@
-mountain<template>
+<template>
   <q-page class="flex flex-center">
     <Navbar />
     <div class="Home">
@@ -20,7 +20,6 @@ mountain<template>
           <li class="asombrado"><q-item :to="'/Locations/HantedHouse'"><img src="~assets/icones/Hanted.png" alt=""></q-item></li>
         </ul>
       </div>
-
     </div>
   </q-page>
 </template>
@@ -45,8 +44,6 @@ defineOptions({
   }
 });
 </script>
-
-
 <style>
 .Home {
   width: 100%;
@@ -58,7 +55,6 @@ defineOptions({
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .Contagem {
   width: 100%;
   height: 100px;
@@ -70,24 +66,19 @@ defineOptions({
   font-weight: bold;
   margin: 30px 0;
 }
-
 .text,
 .time {
   text-align: center;
 }
-
 .text {
   font-size: 30px;
 }
-
 .time {
   font-size: 65px;
 }
-
 .time p {
   margin: 0;
 }
-
 .Locais {
   width: 100%;
   min-height: 500px;
@@ -96,7 +87,6 @@ defineOptions({
   align-items: center;
   padding-bottom: 100px;
 }
-
 .Locais ul {
   margin: 0;
   padding: 0;
@@ -108,7 +98,6 @@ defineOptions({
   flex-wrap: wrap;
   gap: 20px;
 }
-
 .Locais ul li {
   width: 150px;
   height: 150px;

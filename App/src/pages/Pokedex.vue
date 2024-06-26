@@ -1,14 +1,11 @@
 <template>
   <q-page class="flex flex-center" v-if="!info">
     <Navbar />
-
     <div class="pokedex">
-
       <div class="collections">
         <h2>Cards coletados</h2>
         <span>{{ cards.length }}/1025</span>
       </div>
-
       <div class="list">
         <div class="abas">
           <div :class="[aba == 'seus' ? 'activeAba' : '', 'seus']" @click="aba = 'seus'">
@@ -31,17 +28,12 @@
         <div bordered separator v-else class="cards">
           <Card v-for="n in 4" :key="n" :style="'back'" />
         </div>
-
       </div>
-
-
     </div>
   </q-page>
   <Info v-else :id="info" :setInfo="setInfo" />
 </template>
-
 <script setup>
-
 import { db } from "src/firebase/Configs";
 import {
   collection,
@@ -56,7 +48,6 @@ import Card from 'src/components/Card.vue';
 import Info from 'src/components/Info.vue'
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 import axios from 'axios';
-
 defineOptions({
   name: 'PokedexPage',
   components: {
@@ -219,7 +210,6 @@ defineOptions({
   }
 });
 </script>
-
 
 <style>
 .pokedex {

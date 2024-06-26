@@ -23,7 +23,8 @@
             <input type="password" name="confirmPassword" v-model="ConfirmPassword" required
               placeholder='Confirme a sua senha'>
           </label>
-          <button class='btn-default'>Register</button>
+          <button class='btn-default' v-if="!loading">Register</button>
+          <button class='btn-default' v-else>aguarde...</button>
           <div class="register">
             <q-btn :to="'Login'" class="btn-change">Logar</q-btn>
           </div>
@@ -65,7 +66,8 @@ defineOptions({
       error: null,
       currentDate: null,
       pokemon: null,
-      pokebola: null
+      pokebola: null,
+      loading: null,
     }
 
   },
@@ -88,9 +90,8 @@ defineOptions({
   },
   methods: {
     async handleRegister(e) {
-
       e.preventDefault()
-
+      this.loading = true
 
       var data = {
         displayName: this.displayName,
@@ -140,8 +141,8 @@ defineOptions({
           pokebolas: this.pokebola
         }
         this.SETREWARDS(NewRewards)
-
         this.$router.replace({ path: '/' })
+        this.loading = false
       } catch (error) {
         console.log(error);
       }

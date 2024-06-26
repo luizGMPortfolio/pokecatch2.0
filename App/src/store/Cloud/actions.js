@@ -14,7 +14,6 @@ const createDocuments = async (collections, data) => {
   const NewData = { ...data, createdAt: Timestamp.now() };
   try {
     const docRef = await addDoc(collection(db, collections), NewData);
-    console.log(docRef);
   } catch (error) {
     console.log(error.message);
     console.log(typeof error.message);
@@ -53,7 +52,6 @@ const GetDocuments = async (docCollection, uid = null) => {
           ...doc.data(),
         }))
       );
-      console.log(data)
       return data[0].time
     });
   } catch (error) {

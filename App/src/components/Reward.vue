@@ -225,4 +225,16 @@ defineOptions({
   bottom: 50px;
   scale: 1.2;
 }
+
+@media (max-width: 768px) {
+    .inicial .title h1 {
+        font-size: 40px !important;
+        line-height: 1.2;
+    }
+    .inicial .title {
+      width: 90%;
+
+    }
+}
+
 </style>

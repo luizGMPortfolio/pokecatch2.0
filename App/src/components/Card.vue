@@ -1,7 +1,7 @@
 <template>
   <div v-if="style == 'default'" class="card" @click="setInfo(num)">
     <div class='name'>
-      <h3>{{ name }}</h3>
+      <h3 :class="name.length > 15 ? 'ajust' : ''">{{ name }}</h3>
     </div>
     <div class='img'>
       <img :src="img" alt="" />
@@ -236,4 +236,10 @@ const props = defineProps({
   font-weight: 300;
   color: #bdbdbd;
 }
+
+.ajust{
+  padding: 0;
+  font-size: 12px;
+}
+
 </style>

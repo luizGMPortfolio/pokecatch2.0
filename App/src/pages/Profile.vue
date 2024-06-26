@@ -86,9 +86,6 @@ defineOptions({
     ...mapState('Cloud', ['document']),
     ...mapMutations('Cloud', ['SETDOCUMENT'])
   },
-  created() {
-
-  },
   mounted() {
     this.fetchItens()
     this.fetchStatus()

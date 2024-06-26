@@ -18,7 +18,6 @@ import Reward from '../components/Reward.vue';
 import { mapActions, mapMutations, mapState } from 'vuex';
 import { GetAllPokemons } from 'src/store/PokeApi/actions';
 import { SETPOKEMONS } from 'src/store/PokeApi/mutations';
-
 import { db } from "src/firebase/Configs";
 import {
   collection,
@@ -29,9 +28,6 @@ import {
 } from "firebase/firestore";
 import { UpdateDocuments } from 'src/store/Cloud/actions';
 import { NewLocations } from 'src/store/Database/actions';
-
-
-
 defineOptions({
   name: 'MainLayout',
   data() {
@@ -43,17 +39,14 @@ defineOptions({
   async mounted() {
     onAuthStateChanged(getAuth(), (user) => {
       if(user){
-        console.log('usuario confirmado')
+
       }
       else{
-        console.log('sem usuario')
+
         this.$router.replace({ path: '/Login' })
       }
       this.SETUSER(user)
     })
-    this.pokemons = await GetAllPokemons()
-    this.SETPOKEMONS(this.pokemons)
-    this.fetchConfigs()
   },
   computed: {
     ...mapState('Reward', ['Rewards']),

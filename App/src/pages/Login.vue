@@ -5,7 +5,7 @@
         <img src='~assets/icones/LogoPokecatch.png' alt="" />
       </div>
       <div class='inputs'>
-        <q-form>
+        <q-form v-on:submit="handleLogin">
           <label>
             E-mail
             <input type="email" name="user" v-model="email" placeholder='Insira seu E-mail' required>
@@ -14,7 +14,8 @@
             Senha
             <input type="password" name="password" v-model="password" required placeholder='Crie sua senha'>
           </label>
-          <button class='btn-default' @click="handleLogin">Login</button>
+          <button class='btn-default' v-if="!loading">Login</button>
+          <button class='btn-default' v-else>aguarde...</button>
           <div class="register">
             <q-btn :to="'Register'" class="btn-change">Cadastrar-se</q-btn>
           </div>
@@ -36,14 +37,16 @@ defineOptions({
   data(){
     return{
       email: '',
-      password: ''
+      password: '',
+      loading: false
     }
   },
-  created(){
-    location.reload();
-  },
   methods:{
-    async handleLogin(){
+    async handleLogin(e){
+      e.preventDefault()
+      this.loading = true
+
+
       var data = {
         email: this.email,
         password: this.password
@@ -51,6 +54,7 @@ defineOptions({
       try {
         const res = await Login(data)
         this.$router.replace({ path: '/' })
+        this.loading = false
       } catch (error) {
         console.log(error);
       }

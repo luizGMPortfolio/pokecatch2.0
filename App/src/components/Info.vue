@@ -136,12 +136,12 @@
           <div class="habilits">
             <h2>Habilidades</h2>
             <div>
-              <span v-for="(item, id) in this.pokemon.abilities" :key="id">{{ item.ability.name }}</span>
+              <span v-for="(item, id) in pokemon.abilities" :key="id">{{ item.ability.name }}</span>
             </div>
           </div>
           <div class="move">
             <h2>Moves</h2>
-            <div v-for="(move, id) in this.pokemon.moves" :key="id">
+            <div v-for="(move, id) in pokemon.moves" :key="id">
               <span>{{ move.move.name }}</span>
               <span>{{ move.version_group_details[0].move_learn_method.name }}</span>
               <span>{{ move.version_group_details[0].level_learned_at }}</span>
@@ -177,8 +177,8 @@
             </span>
           </div>
           <div class="hates">
-            <div><span>base_happiness: </span> {{ this.specie.base_happiness }}</div>
-            <div><span>capture_rate: </span> {{ this.specie.capture_rate }}</div>
+            <div><span>base_happiness: </span> {{ specie.base_happiness }}</div>
+            <div><span>capture_rate: </span> {{ specie.capture_rate }}</div>
           </div>
           <div class="ight">
             <div><span>Height:</span> {{ pokemon.height }}</div>

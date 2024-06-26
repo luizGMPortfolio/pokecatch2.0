@@ -38,11 +38,9 @@
         </div>
       </div>
     </menu>
-
     <div id='throwPokeball' :class="['throwPokeball', ImgPokeball, IsAnimating ? 'animation' : '']"
       v-on:animationend="handleAnimationEnd">
     </div>
-
     <div id='check' class="check" v-bind:class="ImgPokeball" v-on:animationend="TryCatch(ImgPokeball)"></div>
 
   </div>
@@ -74,8 +72,6 @@ import { UpdateDocuments } from "src/store/Cloud/actions";
 import { RandonHowPokemons } from "src/store/PokeApi/actions";
 import { SETREWARDS } from "src/store/Reward/mutations";
 import { RandonPokeball } from "src/store/Reward/actions";
-
-
 defineOptions({
   name: 'LocationsPage',
   components: {
@@ -110,16 +106,12 @@ defineOptions({
     })
     this.fetchConfigs()
     this.pokebolas = await RandonPokeball();
-
-
   },
   computed: {
     ...mapState('Auth', ['user']),
     ...mapState('Cloud', ['document']),
-
   },
   methods: {
-
     ...mapGetters('Auth', ['getUser']),
 
     ...mapActions('Cloud', ['GetDocuments']),
@@ -791,7 +783,7 @@ defineOptions({
 }
 
 .q-item {
-  border-radius: 50%;
+  border-radius: 35px;
 }
 
 @keyframes throw {
